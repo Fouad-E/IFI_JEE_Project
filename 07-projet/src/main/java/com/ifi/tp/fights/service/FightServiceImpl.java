@@ -107,7 +107,7 @@ public class FightServiceImpl implements  FightService{
                 // Pokemon1 attacks Pokemon2
                 if(trainerAttack==1){
                     // Update hp
-                    hp = attackAndUpdateHp(pokemonTrainer1, pokemonTrainer1);
+                    hp = attackAndUpdateHp(pokemonTrainer1, pokemonTrainer2);
                     description = pokemonTrainer1.getType().getName()+ " hits. "+pokemonTrainer2.getType().getName()+" loses "+hp+" HP.";
                     detailsAction.add(new DetailAction(round, description));
                     this.notificationService.sendNotification("Round "+round+" : "+description);
